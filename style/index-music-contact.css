@@ -1,0 +1,29 @@
+.music-and-contact {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    z-index: 100;
+}
+
+.music-and-contact .icons {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 0.1vw solid rgb(96, 96, 96);
+    transition: all 0.1s;
+    z-index: 200;
+    background-color: white;
+} 
+
+.music-and-contact .icon-boxs {
+    width: 2vw;
+    aspect-ratio: 1 / 1;
+    margin: 1vw;
+    transition: all 0.1s ease-in-out   ;
+    cursor: pointer;
+}
+
+.music-and-contact .icon,
+.music-and-contact .icon-boxs:hover{
+    transform: scale(1.2);
+}

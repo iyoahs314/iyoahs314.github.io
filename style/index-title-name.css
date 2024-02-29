@@ -1,0 +1,78 @@
+.iyoahs {
+    width: 35vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0%;
+}
+
+
+.iyoahs .title-iyoahs {
+    position: absolute;
+    top: 10%;
+    left: -40%;
+}
+
+.iyoahs .intro-iyoahs {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    text-align: center;
+    position: absolute;
+    bottom:10%;
+    left: -40%;
+    color:white;
+    z-index: 10;
+    border: 0.3vw dashed rgb(255, 255, 255);
+    border-radius: 1vw;
+    padding: 2vw;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.iyoahs .intro-iyoahs P {
+    font-size: 2vw;
+    font-family: "IPix-Chinese";
+    overflow: hidden;
+}
+
+
+.iyoahs .title-iyoahs .type-writing {
+    overflow: hidden;
+    display: block;
+    font-size: 6vw;
+    color: white;
+    letter-spacing: 4px;
+    animation: typing 10s steps(6) infinite;
+}
+
+.iyoahs .title-iyoahs::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.3vw;
+    height: 100%;
+    background-color: #fff;
+    animation: blink 1.1S linear infinite;
+}
+
+@keyframes blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    35%, 55% {
+        width: 36vw;
+    }
+    90%, 100% {
+        width: 0;
+    }
+}

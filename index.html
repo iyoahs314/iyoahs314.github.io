@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iyoahs-site</title>
+    
+    <style>
+        @font-face {
+            font-family: "Press Start 2P for English";
+            src: url("font/PressStart2P-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "IPix-Chinese";
+            src: url("font/IPix-Chinese.ttf");
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Press Start 2P for English";
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            overflow: hidden;
+            background: rgb(255, 255, 255);
+            background-size: cover; 
+            background-position: center;
+            height: 100vh;
+            width: 100vw;
+            transition: all 2s;
+        }
+
+        /* mmmm, */
+        
+    </style>
+
+    <link rel="stylesheet" href="style/index-left-slider.css">
+    <link rel="stylesheet" href="style/index-music-contact.css">
+    <link rel="stylesheet" href="style/index-hidden-box.css">
+    <link rel="stylesheet" href="style/index-title-name.css">
+    <link rel="stylesheet" href="style/index-message-box.css">
+</head>
+<body">
+    <div class="shell">
+        <div class="item active">
+            <div class="box" >
+                <div class="mini-box">
+                    <div class="title">
+                        <span class="title-content">个人介绍：</span>
+                    </div>
+                    <div class="content-body">
+                        <span class="two-lins leave_message">
+                            欢迎留言！
+                        </span>
+                    </div>
+                    
+                    <div class="choice">
+                        <div class="choice-box" onclick="gotoNext()">
+                            <p2>NEXT</p2>
+                        </div>
+            
+                        <div class="choice-box" onclick="gotoPrev()">
+                            <p2>PREV</p2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item next">
+            <div class="box" >
+                <div class="mini-box">
+                    <div class="title">
+                        <span class="title-content">兴趣爱好：</span>
+                    </div>
+                    <div class="content-body">
+                        <span class="two-lins leave_message">
+                            欢迎留言！
+                        </span>
+                    </div>
+                    
+                    <div class="choice">
+                        <div class="choice-box" onclick="gotoNext()">
+                            <p2>NEXT</p2>
+                        </div>
+            
+                        <div class="choice-box" onclick="gotoPrev()">
+                            <p2>PREV</p2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box" >
+                <div class="mini-box">
+                    <div class="title">
+                        <span class="title-content">xxx</span>
+                    </div>
+                    <div class="content-body">
+                        <span class="two-lins leave_message">
+                            欢迎留言！
+                        </span>
+                    </div>
+                    
+                    <div class="choice">
+                        <div class="choice-box" onclick="gotoNext()">
+                            <p2>NEXT</p2>
+                        </div>
+            
+                        <div class="choice-box" onclick="gotoPrev()">
+                            <p2>PREV</p2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item prev">
+            <div class="box" >
+                <div class="mini-box">
+                    <div class="title">
+                        <span class="title-content">xxxx</span>
+                    </div>
+                    <div class="content-body">
+                        <span class="two-lins leave_message">
+                            欢迎留言！
+                        </span>
+                    </div>
+                    
+                    <div class="choice">
+                        <div class="choice-box" onclick="gotoNext()">
+                            <p2>NEXT</p2>
+                        </div>
+            
+                        <div class="choice-box" onclick="gotoPrev()">
+                            <p2>PREV</p2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <div class="music-and-contact">
+        <div class="icon-boxs music-switch">
+           <img src="pic/music_close.png" class="icons music-icon" onclick="controlMusic()">
+        </div>
+        <div class="icon-boxs wechat">
+            <img src="pic/wechat.png" class="icons" onclick="open_wechat_pic()">
+        </div>
+        <div class="icon-boxs QQ">
+            <img src="pic/QQ.png"  class="icons" onclick="open_QQ_pic()">
+        </div>
+    </div>
+
+    <div class="iyoahs">
+        <div class="title-iyoahs">
+            <h2 class="type-writing">iyoahs</h2>
+        </div>
+
+        <div class="intro-iyoahs">
+            <p>公告栏:</p>
+            <p>1.xxxxxxxxxxxxxx</p>
+            <p>2.xxxxxxxxxxxxxx</p>
+            <p>3.xxxxxxxxxxxxxx</p>
+            <p>4.xxxxxxxxxxxxxx</p>
+            <p>5.xxxxxxxxxxxxxx</p>
+            <p>6.xxxxxxxxxxxxxx</p>
+            <p>7.xxxxxxxxxxxxxx</p>
+            <p>8.xxxxxxxxxxxxxx</p>
+            <p>9.xxxxxxxxxxxxxx</p>
+            <p>10.xxxxxxxxxxxxx</p>
+            <p>11.xxxxxxxxxxxxx</p>
+            <p>12.xxxxxxxxxxxxx</p>
+        </div>
+    </div>
+
+    <div class="hidden-window">
+        <div class="hidden-box">
+            <div class="close" onclick="close_hidden_window()">&times;</div>
+            <img src="#" class="pic-contact">
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="music/background_music.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="box-message-grag" draggable="true">
+        <div class="box-message-internal">
+            <div class="title">
+                <span class="title-content">留言</span>
+                <span class="close" onclick="closeWindow()">&times;</span>
+            </div>
+            <div class="content-body">
+                <span class="two-lins leave_message">
+                    欢迎留言！
+                </span>
+            </div>
+            
+            <div class="choice">
+                <div class="choice-box">
+                    <p2>YES</p2>
+                </div>
+    
+                <div class="choice-box" onclick="closeWindow()">
+                    <p2>NO</p2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-message-grag-pic" draggable="true">
+        <div class="box-message-internal-pic">
+            <div class="title">
+                <span class="title-content">iyoahs</span>
+                <span class="close" onclick="closeWindow2()">&times;</span>
+            </div>
+
+            <div class="box-avatar">
+                <img src="pic/iyoahs.jpg" class="my-avatar">
+            </div>
+            
+            <div class="choice">
+                <div class="choice-box">
+                    <p2>YES</p2>
+                </div>
+    
+                <div class="choice-box" onclick="closeWindow2()">
+                    <p2>NO</p2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: rgba(0, 0, 0, 0.4); position: absolute;height: 100%;width: 100%; z-index: -100;"></div>
+
+    <script src="script/index-left-slider.js"></script>
+    <script src="script/index-hidden-box.js"></script>
+    <script src="script/index-message-box.js"></script>
+</body>
+</html>

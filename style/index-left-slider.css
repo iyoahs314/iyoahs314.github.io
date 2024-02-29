@@ -1,0 +1,205 @@
+.shell {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.shell .item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    width: 35vw;
+    aspect-ratio: 7 / 5;
+    /* border-radius:50%; */
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    background-color: #fff;
+}
+
+.shell .item .box {
+    width: 100%;
+    height: 100%;
+    background-color:  rgb(188, 225, 237);
+    border: 0.14vw solid  rgb(188, 225, 237);
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.shell .item .box  .mini-box {
+    border-top: 0.2vw solid rgb(140, 165, 204);
+    border-bottom: 0.2vw solid rgb(2, 31, 72);
+    border-left: 0.2vw solid rgb(188, 196, 209);
+    border-right: 0.2vw solid rgb(0, 22, 53);
+    box-sizing: border-box; 
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.shell .box .mini-box .title {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(16, 88, 197);
+    padding-right: 0.3vw;
+}
+
+.shell .box .mini-box .title .title-content {
+    color: white;
+    font-size: 1.1vw;
+     font-family: "IPix-Chinese";
+    font-weight: 500;
+    width: 80%;
+    height: 100%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    position: relative;
+    top: 50%;
+    left: 3%;
+    transform: translate(0%, -25%);
+}
+
+
+.shell .box .mini-box .content-body {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shell .box .mini-box .content-body span {
+    background-color: aliceblue;
+    box-sizing:border-box;
+    border-top: 0.2vw solid rgb(150, 149, 149);
+    border-bottom: 0.2vw solid rgb(68, 66, 66);
+    border-left: 0.2vw solid rgb(190, 190, 190);
+    border-right: 0.2vw solid rgb(53, 50, 50);
+}
+
+.shell .box .mini-box .content-body .leave_message {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1vw;
+    font-family: "IPix-Chinese";
+    font-weight: 500;
+}    
+
+.shell .box .mini-box .choice {
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transform: translate(0, -25%);
+}
+
+.shell .box .mini-box .choice-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1vw solid rgb(34, 34, 34);
+    width: 15%;
+    height: 75%;
+    margin: 10px;
+    transition: all 0.1s;
+}
+
+.shell .box .mini-box .choice-box:hover {
+    border: 0.12vw solid rgba(34, 34, 34, 0.8);
+}
+
+.shell .box .mini-box .choice-box p2 {
+    width: 90%;
+    height: 76%;
+    font-size: 0.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.08vw dashed rgb(34, 34, 34);
+    transition: 0.1s;
+}
+
+.shell .box .mini-box .choice-box p2:hover {
+    font-size: 0.9vw;
+    font-weight: bold;
+}
+
+
+.shell .item.active {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -50%), scale(1.2);
+    box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+} 
+
+.shell .item.prev {
+    z-index: 2;
+    opacity: 0.35;
+    transform: translate(-50%, -125%);
+}
+
+.shell .item.next {
+    z-index: 2;
+    opacity: 0.35;
+    transform: translate(-50%, 25%);
+}
+
+.shell .button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 315px;
+    z-index: 200;
+}
+
+.shell .button-container .button{
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.shell .button-container .button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(5, 5, 5, 0.5);
+    border-radius: 50%;
+    z-index: -100;
+}
+
+.shell .button-container .iconfont {
+    display: block;
+}
+
+.shell .button-container .button:nth-child(1) {
+    float: left;
+}
+
+.shell .button-container .button:nth-child(2) {
+    float: right;
+}

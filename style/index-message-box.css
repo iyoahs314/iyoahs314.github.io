@@ -1,0 +1,263 @@
+.box-message-grag {
+    width: 18%;
+    aspect-ratio: 8 / 5;
+    background-color:  rgb(188, 225, 237);
+    border: 0.14vw solid  rgb(158, 158, 158);
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    cursor: grab;
+    right: 5%;
+    bottom: 1%;
+    z-index: 100;
+}
+
+.box-message-grag .box-message-internal {
+    border: 0.08vw solid rgb(0, 0, 0);
+    box-sizing: border-box; 
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+
+.box-message-grag .box-message-internal .title {
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(16, 88, 197);
+    padding-right: 0.3vw;
+}
+
+.box-message-grag .box-message-internal .title .title-content {
+    color: white;
+    font-size: 1.2vw;
+    font-family: "IPix-Chinese";
+    width: 80%;
+    height: 100%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    position: relative;
+    top: 20%;
+    left: 3%;
+}
+
+.box-message-grag .box-message-internal .title .close {
+    height: 50%;
+    aspect-ratio: 1 / 1;
+    color: white;
+    font-size: 1.4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(44, 45, 47);
+    border-top: 0.2vw solid rgb(219, 222, 223);
+    border-left: 0.2vw solid rgb(143, 147, 151);
+    border-bottom: 0.2vw solid rgb(13, 14, 16);
+    border-right: 0.2vw solid rgb(19, 20, 22);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.box-message-grag .box-message-internal .title .close:hover {
+    font-size: 1.5vw;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.box-message-grag .box-message-internal .content-body {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-message-grag .box-message-internal .content-body .leave_message {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vw;
+    font-family: "IPix-Chinese";
+}
+
+.box-message-grag .box-message-internal .choice {
+    text-align: center;
+    width: 100%;
+    height: 16.6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box-message-grag .box-message-internal .choice-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1vw solid rgb(34, 34, 34);
+    width: 25%;
+    height: 75%;
+    margin: 10px;
+    transition: all 0.1s;
+}
+
+.box-message-grag .box-message-internal .choice-box:hover {
+    border: 0.12vw solid rgba(34, 34, 34, 0.8);
+}
+
+.box-message-grag .box-message-internal .choice-box p2 {
+    width: 90%;
+    height: 76%;
+    font-size: 0.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.08vw dashed rgb(34, 34, 34);
+    transition: 0.1s;
+}
+
+.box-message-grag .box-message-internal .choice-box p2:hover {
+    font-size: 0.84vw;
+    font-weight: bold;
+}
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
+.box-message-grag-pic {
+    width: 15%;
+    aspect-ratio: 2 / 3;
+    background-color:  rgb(188, 225, 237);
+    border: 0.14vw solid  rgb(158, 158, 158);
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    cursor: grab;
+    right: 25%;
+    bottom: 1%;
+    z-index: 100;
+}
+
+.box-message-grag-pic .box-message-internal-pic {
+    border: 0.08vw solid rgb(0, 0, 0);
+    box-sizing: border-box; 
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+
+.box-message-grag-pic .box-message-internal-pic .title {
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(16, 88, 197);
+    padding-right: 0.3vw;
+}
+
+.box-message-grag-pic .box-message-internal-pic .title .title-content {
+    color: white;
+    font-size: 1.2vw;
+    font-family: "IPix-Chinese";
+    width: 80%;
+    height: 100%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    position: relative;
+    top: 20%;
+    left: 3%;
+}
+
+.box-message-grag-pic .box-message-internal-pic .title .close {
+    height: 50%;
+    aspect-ratio: 1 / 1;
+    color: white;
+    font-size: 1.4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(44, 45, 47);
+    border-top: 0.2vw solid rgb(219, 222, 223);
+    border-left: 0.2vw solid rgb(143, 147, 151);
+    border-bottom: 0.2vw solid rgb(13, 14, 16);
+    border-right: 0.2vw solid rgb(19, 20, 22);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.box-message-grag-pic .box-message-internal-pic .title .close:hover {
+    font-size: 1.5vw;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.box-message-grag-pic .box-message-internal-pic .box-avatar {
+    width: 100%;
+    height: 70%;
+}
+
+.box-message-grag-pic .box-message-internal-pic .box-avatar .my-avatar {
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 0.2vw solid rgb(156, 157, 158);
+    border-left: 0.2vw solid rgb(193, 194, 194);
+    border-bottom: 0.2vw solid rgb(42, 43, 43);
+    border-right: 0.2vw solid rgb(34, 34, 35);
+}
+
+.box-message-grag-pic .box-message-internal-pic .choice {
+    text-align: center;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box-message-grag-pic .box-message-internal-pic .choice-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1vw solid rgb(34, 34, 34);
+    width: 30%;
+    height: 60%;
+    margin: 10px;
+    transition: all 0.1s;
+}
+
+.box-message-grag-pic .box-message-internal-pic .choice-box:hover {
+    border: 0.12vw solid rgba(34, 34, 34, 0.8);
+}
+
+.box-message-grag-pic .box-message-internal-pic .choice-box p2 {
+    width: 90%;
+    height: 76%;
+    font-size: 0.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.08vw dashed rgb(34, 34, 34);
+    transition: 0.1s;
+}
+
+.box-message-grag-pic .box-message-internal-pic .choice-box p2:hover {
+    font-size: 0.84vw;
+    font-weight: bold;
+}
