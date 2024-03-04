@@ -1,7 +1,7 @@
 .box-message-grag {
     width: 18%;
     aspect-ratio: 8 / 5;
-    background-color:  rgb(188, 225, 237);
+    background-color:  var(--color-background-1);
     border: 0.14vw solid  rgb(158, 158, 158);
     box-sizing: border-box; 
     display: flex;
@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(16, 88, 197);
+    background-color: var(--color-background-2);
     padding-right: 0.3vw;
 }
 
@@ -134,7 +134,7 @@
 .box-message-grag-pic {
     width: 15%;
     aspect-ratio: 2 / 3;
-    background-color:  rgb(188, 225, 237);
+    background-color:  var(--color-background-1);
     border: 0.14vw solid  rgb(158, 158, 158);
     box-sizing: border-box; 
     display: flex;
@@ -162,7 +162,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(16, 88, 197);
+    background-color: var(--color-background-2);
     padding-right: 0.3vw;
 }
 

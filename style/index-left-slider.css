@@ -24,8 +24,8 @@
 .shell .item .box {
     width: 100%;
     height: 100%;
-    background-color:  rgb(188, 225, 237);
-    border: 0.14vw solid  rgb(188, 225, 237);
+    background-color:  var(--color-background-1);
+    border: 0.14vw solid  var(--color-background-1);
     box-sizing: border-box; 
     display: flex;
     flex-direction: column;
@@ -50,13 +50,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(16, 88, 197);
+    background-color: var(--color-background-2);
     padding-right: 0.3vw;
 }
 
 .shell .box .mini-box .title .title-content {
     color: white;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
      font-family: "IPix-Chinese";
     font-weight: 500;
     width: 80%;
@@ -79,25 +79,106 @@
     justify-content: center;
 }
 
-.shell .box .mini-box .content-body span {
-    background-color: aliceblue;
-    box-sizing:border-box;
-    border-top: 0.2vw solid rgb(150, 149, 149);
-    border-bottom: 0.2vw solid rgb(68, 66, 66);
-    border-left: 0.2vw solid rgb(190, 190, 190);
-    border-right: 0.2vw solid rgb(53, 50, 50);
-}
 
 .shell .box .mini-box .content-body .leave_message {
     width: 90%;
     height: 90%;
     display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-sizing:border-box;
+    border-top: 0.2vw solid rgb(150, 149, 149);
+    border-bottom: 0.2vw solid rgb(68, 66, 66);
+    border-left: 0.2vw solid rgb(190, 190, 190);
+    border-right: 0.2vw solid rgb(53, 50, 50);
+}    
+
+.shell .box .mini-box .content-body .leave_message .left {
+    width: 60%;
+    height: 95%;
+    position: relative;
+    left: 1%;
+    top: 50%;
+    background-color: white;
+    transform: translate(0, -50%);
+    border: 0.1vw solid black;
+    overflow-y: auto;
+}
+
+/* .shell .box .mini-box .content-body .leave_message .left::-webkit-scrollbar {
+    display: none;
+} */
+
+.shell .box .mini-box .content-body .leave_message .left p {
+    font-family: "IPix-Chinese";
+    font-size: 1.2vw;
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+    margin: 5px;
+}
+
+.shell .box .mini-box .content-body .leave_message .right {
+    width: 30%;
+    height: 95%;
+    position: relative;
+    right: 1%;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shell .box .mini-box .content-body .leave_message .right .right-top {
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 0.1vw solid rgb(0, 0, 0);
+    position: relative;
+    left: 50%;
+    top: 2.5%;
+    transform: translate(-50%, 0); 
+}
+
+.shell .box .mini-box .content-body .leave_message .right .right-top img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.shell .box .mini-box .content-body .leave_message .right .right-bottom {
+    width: 90%;
+    aspect-ratio: 2 / 1;
+    position: relative;
+    left: 50%;
+    bottom: 2.5%;
+    transform: translate(-50%, 0);
+}
+
+.shell .box .mini-box .content-body .leave_message .right .right-bottom p{
+    font-size: 0.9vw;
+    width: 80%;
+    height: 70%;
+    background-color: var(--color-background-1);
+    border-top: 0.2vw solid rgb(150, 149, 149);
+    border-bottom: 0.2vw solid rgb(68, 66, 66);
+    border-left: 0.2vw solid rgb(190, 190, 190);
+    border-right: 0.2vw solid rgb(53, 50, 50);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1vw;
-    font-family: "IPix-Chinese";
-    font-weight: 500;
-}    
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.shell .box .mini-box .content-body .leave_message .right .right-bottom p:hover {
+    font-size: 0.95vw;
+}
 
 .shell .box .mini-box .choice {
     text-align: center;

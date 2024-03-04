@@ -1,13 +1,7 @@
 const slider = document.querySelector(".shell");
 const slides = document.querySelectorAll(".item");
 const body = document.body;
-const box_shell = document.querySelectorAll(".shell .item .box");
-const title_shell = document.querySelectorAll(".shell .item .box .title");
-const close1 = document.querySelector(".box-message-grag .box-message-internal .title");
-const close2 = document.querySelector(".box-message-grag-pic .box-message-internal-pic .title");
-const box_message = document.querySelector(".box-message-grag");
-const box_message2 = document.querySelector(".box-message-grag-pic");
-
+const root = document.documentElement;
 
 let current = 0;
 let prev = 3; 
@@ -61,11 +55,6 @@ const gotoNum = number => {
 }
 
 function change_slider(index, rgb1, rgb2) {
-    box_shell[index].style.backgroundColor = rgb1;
-    box_shell[index].style.borderColor = rgb1;
-    title_shell[index].style.backgroundColor = rgb2;
-    close1.style.backgroundColor = rgb2;
-    close2.style.backgroundColor = rgb2;
-    box_message.style.backgroundColor = rgb1;
-    box_message2.style.backgroundColor = rgb1;
+    root.style.setProperty('--color-background-1', rgb1);
+    root.style.setProperty('--color-background-2', rgb2);
 }
