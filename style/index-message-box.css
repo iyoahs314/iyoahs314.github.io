@@ -1,5 +1,5 @@
 .box-message-grag {
-    width: 18%;
+    width: 15%;
     aspect-ratio: 8 / 5;
     background-color:  var(--color-background-1);
     border: 0.14vw solid  rgb(158, 158, 158);
@@ -132,7 +132,7 @@
 /* aaaaaaaaaaaaaaaaaaaaaaaaaaaa */
 
 .box-message-grag-pic {
-    width: 15%;
+    width: 12%;
     aspect-ratio: 2 / 3;
     background-color:  var(--color-background-1);
     border: 0.14vw solid  rgb(158, 158, 158);
