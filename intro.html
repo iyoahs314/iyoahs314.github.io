@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --letter-up: -150px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #3B4049;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 600px;
+            background-color: #3760C9;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 1s;
+            z-index:0;
+        }
+
+        .letter {
+            position: absolute;
+            top: 0;
+            width: 80%;
+            height: 90%;
+            background-color: white;
+            border-radius: 15px;
+            z-index: 2;
+            transition: 0.5s;
+        }
+
+
+        .envelope {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border-top: 200px solid transparent;
+            border-right: 300px solid #C4DFF0;
+            border-bottom: 200px solid #C4DFF0;
+            border-left: 300px solid #A4D4F2;
+            z-index: 3;
+        }
+
+        .lid {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border-right: 300px solid transparent;
+            border-bottom: 200px solid transparent;
+            border-left: 300px solid transparent;
+            transform-origin: top;
+            transition: transform 0.25s linear;
+        }
+
+        .lid.one {
+            border-top:200px solid #658CED;
+            transform: rotateX(0deg);
+            z-index: 3;
+            transition-delay: 0.75s;
+        } 
+
+        .lid.two {
+            border-top: 200px solid #3760C9;
+            transform: rotateX(90deg);
+            z-index: 1;
+            transition-delay: 0.5s;
+        }
+
+        .wrapper:hover .lid.one {
+            transform: rotateX(90deg);
+            transition-delay: 0s;
+        }
+
+        .wrapper:hover .lid.two {
+            transform: rotateX(100deg);
+            transition-delay: 0.25s;
+        }
+
+        .wrapper:hover .letter {
+            transform: translateY(var(--letter-up));
+            transition-delay: 0.5s;
+        }
+
+        .thumbnail .click-background-box {
+            width: 100%;
+            height: 250px;
+            transition: all 0.4s ease-in;
+            cursor: pointer;
+        }
+
+        .thumbnail .click-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .thumbnail .img-back {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: start;
+            padding: 20px;
+        }
+
+        .thumbnail .img-back .pic-iyoahs {
+            width: 150px;
+            aspect-ratio: 1 / 1;
+            position: relative;
+            border-radius: 50%;
+            transform: translate(0, -60%);
+        }
+
+        @keyframes disappear {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="lid one"></div>
+        <div class="lid two"></div>
+        <div class="envelope"></div>
+        <div class="letter">
+            <div class="thumbnail">
+                <div class="click-background-box">
+                    <img src="pic/intro_background.png" class="click-img">
+                </div>
+                <div class="img-back">
+                    <img src="pic/iyoahs.jpg" class="pic-iyoahs">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const wrapper = document.querySelector('.wrapper');
+    const letter = document.querySelector('.letter');
+    const lidOne = document.querySelector('.wrapper .one');
+    const lidTwo = document.querySelector('.wrapper .two');
+    const envelope = document.querySelector('.wrapper .envelope');
+
+    wrapper.addEventListener('click', function() {
+        document.documentElement.style.setProperty('--letter-up', '0px');
+
+        letter.style.transform = "translateY(-150px)";
+        letter.style.height = "unset";
+
+        wrapper.style.backgroundColor = "#3B4049";
+        wrapper.style.cursor = "unset";
+
+        const elementsToAnimate = [lidOne, lidTwo, envelope];
+
+        elementsToAnimate.forEach(element => {
+            element.style.animation = "disappear 1s";
+            element.style.opacity = 0;
+        });
+    });
+</script>
+</html>

@@ -2,15 +2,16 @@ const slider = document.querySelector(".shell");
 const slides = document.querySelectorAll(".item");
 const body = document.body;
 const root = document.documentElement;
+const active_left = document.querySelector(".shell .active .left");
 
 let current = 0;
 let prev = 3; 
 let next = 1; 
 
 body.style.backgroundImage = 'url("pic/background'+(current+1)+'.gif")';
-change_slider(1, "rgb(244, 248, 171)", "rgb(92, 97, 0)");
-change_slider(2, "rgb(208, 175, 225)", "rgb(105, 3, 160)");
 change_slider(3, "rgb(152, 209, 188)", "rgb(0, 83, 3)");
+change_slider(2, "rgb(208, 175, 225)", "rgb(105, 3, 160)");
+change_slider(1, "rgb(244, 248, 171)", "rgb(92, 97, 0)");
 change_slider(0, "rgb(188, 225, 237)", "rgb(16, 88, 197)");  // 必须放在最后一个
 
 

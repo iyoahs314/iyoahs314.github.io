@@ -52,3 +52,7 @@ function closeWindow2() {
     let window = document.getElementsByClassName("box-message-grag-pic")[0];
     window.style.display = "none";
 }
+
+function openIntro() {
+    window.open("intro.html", "_self");
+}

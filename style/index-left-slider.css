@@ -99,7 +99,9 @@
     position: relative;
     left: 1%;
     top: 50%;
-    background-color: white;
+    /* background-color: var(--color-background-2); */
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
     transform: translate(0, -50%);
     border: 0.1vw solid black;
     overflow-y: auto;
@@ -108,6 +110,7 @@
     border-bottom: 0.2vw solid rgb(68, 66, 66);
     border-left: 0.2vw solid rgb(190, 190, 190);
     border-right: 0.2vw solid rgb(53, 50, 50);
+    transition: all 1s ease-in-out
 }
 
 /* .shell .box .mini-box .content-body .leave_message .left::-webkit-scrollbar {
@@ -115,7 +118,7 @@
 } */
 
 .shell .box .mini-box .content-body .leave_message .left p {
-    font-family: "IPix-Chinese";
+    font-family: "YeZiGongChangAoYeHei-2";
     font-size: 1.2vw;
     font-weight: 200;
     color: rgb(0, 0, 0);

@@ -1,0 +1,31 @@
+.thumbnail .click-background-box {
+    width: 100%;
+    height: 250px;
+    transition: all 0.4s ease-in;
+    cursor: pointer;
+}
+
+.thumbnail .click-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.thumbnail .img-back {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 20px;
+}
+
+.thumbnail .img-back .pic-iyoahs {
+    width: 150px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 50%;
+    transform: translate(0, -60%);
+}
