@@ -7,7 +7,17 @@
 
     <style>
         :root {
-            --letter-up: -150px;
+            --letter-up: -100px;
+        }
+
+        @font-face {
+            font-family: "press";
+            src: url("font/PressStart2P-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "IPix";
+            src: url("font/IPix-Chinese.ttf");
         }
 
         * {
@@ -24,6 +34,7 @@
             justify-content: center;
             align-items: center;
             background-color: #3B4049;
+            overflow: hidden;
         }
 
         .wrapper {
@@ -43,11 +54,12 @@
             position: absolute;
             top: 0;
             width: 80%;
-            height: 90%;
+            height: 100%;
             background-color: white;
             border-radius: 15px;
             z-index: 2;
             transition: 0.5s;
+            overflow: hidden;
         }
 
 
@@ -81,6 +93,7 @@
             border-top:200px solid #658CED;
             transform: rotateX(0deg);
             z-index: 3;
+            transition: all 0.1s;
             transition-delay: 0.75s;
         } 
 
@@ -90,6 +103,7 @@
             z-index: 1;
             transition-delay: 0.5s;
         }
+
 
         .wrapper:hover .lid.one {
             transform: rotateX(90deg);
@@ -108,36 +122,90 @@
 
         .thumbnail .click-background-box {
             width: 100%;
-            height: 250px;
+            height: 25vh;
             transition: all 0.4s ease-in;
-            cursor: pointer;
         }
 
         .thumbnail .click-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.8;
+            /* opacity: 0.8; */
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
         }
 
-        .thumbnail .img-back {
+        .thumbnail .img-box {
             width: 100%;
+            height: 12vh;
             display: flex;
-            justify-content: space-around;
-            align-items: start;
-            padding: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid gray;
         }
 
-        .thumbnail .img-back .pic-iyoahs {
-            width: 150px;
+        .thumbnail .img-box .pic-iyoahs {
+            width: 10vw;
             aspect-ratio: 1 / 1;
             position: relative;
             border-radius: 50%;
-            transform: translate(0, -60%);
+            /* border: 2px solid white; */
+            transform: translateY(-40%);
         }
 
+        .main-body::before {
+            content: "iyoahs";
+            display: block;
+            font-size: 30px;
+            font-family: "press";
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -120%);
+            text-align: center;
+        }
+
+        .thumbnail .main-body {
+            width: 100%;
+            height: 50vh;
+            /* overflow-y: scroll; */
+        }
+
+        .thumbnail .main-body .part {
+            padding: 5%;
+        }
+
+        .thumbnail .main-body .part h2 {
+            text-align: center;
+            font-size: 1.5vw;
+            font-family: 'IPix';
+        }
+
+        .thumbnail .main-body .part p {
+            font-size: 1.3vw;
+            font-family: "IPix";
+            position: relative;
+        }
+
+        .back-index-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .back-index-box .back-index {
+            font-size: 1.5vw;
+            font-family: "IPix";
+            padding: 10px;
+            border:2px solid #000000;
+            cursor: pointer;
+        }
+
+        .back-index-box .back-index:hover {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+ 
         @keyframes disappear {
             0% {
                 opacity: 1;
@@ -147,8 +215,6 @@
             }
         }
     </style>
-
-    <link rel="stylesheet" href="test.css">
 </head>
 <body>
     <div class="wrapper">
@@ -160,8 +226,25 @@
                 <div class="click-background-box">
                     <img src="pic/intro_background.png" class="click-img">
                 </div>
-                <div class="img-back">
+                <div class="img-box">
                     <img src="pic/iyoahs.jpg" class="pic-iyoahs">
+                </div>
+                <div class="main-body">
+                    <div class="part">
+                        <h2>Abort Me</h2>
+                        <p>Name:邵艺(iyoahs)</p>
+                        <p>School:华北电力大学(NCEPU)</p>
+                        <p>Major:信息管理与信息系统</p>
+                        <p>Age:20岁</p>
+                        <h2>Skills</h2>
+                        <p>编程语言:python、java、c语言、javaScript</p>
+                        <p>技能方向:计算机视觉、机器学习、深度学习、web前后端</p>
+                        <h2>Hobbies</h2>
+                        <p>动画、漫画、高达模型制作、J-Pop</p>
+                    </div>
+                    <div class="back-index-box">
+                        <div class="back-index">返回主页</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,11 +256,12 @@
     const lidOne = document.querySelector('.wrapper .one');
     const lidTwo = document.querySelector('.wrapper .two');
     const envelope = document.querySelector('.wrapper .envelope');
+    const back_index = document.querySelector(".back-index-box .back-index")
 
     wrapper.addEventListener('click', function() {
         document.documentElement.style.setProperty('--letter-up', '0px');
 
-        letter.style.transform = "translateY(-150px)";
+        letter.style.transform = "translateY(-200px)";
         letter.style.height = "unset";
 
         wrapper.style.backgroundColor = "#3B4049";
@@ -188,7 +272,12 @@
         elementsToAnimate.forEach(element => {
             element.style.animation = "disappear 1s";
             element.style.opacity = 0;
+            element.style.display = "none";
         });
+    });
+   
+    back_index.addEventListener("click", function() {
+        window.history.back();
     });
 </script>
 </html>
