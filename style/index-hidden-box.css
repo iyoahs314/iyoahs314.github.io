@@ -76,7 +76,7 @@
 
 .chat-container {
     width: 35vw;
-    background-color: #fff;
+    background-color: var(--color-background-1);
     border-color: 8px;
     box-shadow: 0 0 10px rgba(0,0, 0, 0.1);
     border: 1px solid black;
