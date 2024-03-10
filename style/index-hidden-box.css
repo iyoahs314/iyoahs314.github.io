@@ -116,7 +116,6 @@
 .chat-container .message1 {
     display: flex;
     margin-bottom: 10px;
-    background-color: #fff;
 }
 
 .chat-container .message1 img {
@@ -125,13 +124,13 @@
     border-radius: 50%;
     margin-right: 10px;
     border: 1px solid gray;
+    background-color: #fff;
 }
 
 .chat-container .message2 {
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 10px;
-    background-color: #fff;
 }
 
 .chat-container .message2 img {
@@ -140,6 +139,7 @@
     border-radius: 50%;
     margin-left: 10px;
     border: 1px solid gray;
+    background-color: #fff;
 }
 
 .chat-container .message-text-one {
