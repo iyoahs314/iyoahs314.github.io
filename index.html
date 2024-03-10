@@ -230,6 +230,21 @@
         </div>
     </div>
 
+    <div class="hidden-window-message">
+        <div class="chat-container">
+            <div class="back">
+                <div onclick="closeLeaveMessage()">
+                    &times;
+                </div>
+            </div>
+            <div class="chat-messages"></div>
+            <div class="input-container">
+                <textarea class="message-input" placeholder="有什么想说的？"></textarea>
+                <button class="send-button" onclick="sendMessage()">&larr;</button>
+            </div>
+        </div>
+    </div>
+
     <audio id="backgroundMusic" loop>
         <source src="music/background_music.mp3" type="audio/mp3">
     </audio>
@@ -246,7 +261,7 @@
                 </span>
             </div>
             
-            <div class="choice">
+            <div class="choice" onclick="openLeaveMessage()">
                 <div class="choice-box">
                     <p2>YES</p2>
                 </div>

@@ -61,3 +61,130 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+.hidden-window-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+}
+
+.chat-container {
+    width: 35vw;
+    background-color: #fff;
+    border-color: 8px;
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.1);
+    border: 1px solid black;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.chat-container .back {
+    background-color: var(--color-background-2);
+    height: 2vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.chat-container .back div {
+    color: white;
+    height: 100%;
+    width: 5%;
+    font-size: 1.5vw;
+    font-family: "Press Start 2P for English";
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container .chat-messages {
+    padding: 20px;
+    overflow-y: scroll;
+    height: 30vh;
+}
+
+.chat-container .message1 {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chat-container .message1 img {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid gray;
+}
+
+.chat-container .message2 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 10px;
+}
+
+.chat-container .message2 img {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    margin-left: 10px;
+    border: 1px solid gray;
+}
+
+.chat-container .message-text-one {
+    width: auto;
+    padding: 10px;
+    background-color: rgb(224, 243, 250);
+    border-radius: 8px;
+    font-family: "IPix-Chinese";
+}
+
+.chat-container .message-text-two {
+    width: auto;
+    padding: 10px;
+    background-color: rgb(220, 249, 232);
+    border-radius: 8px;
+    font-family: "IPix-Chinese";
+}
+
+.input-container {
+    height: 5vh;
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.message-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 1.2vw;
+    font-family: "IPix-Chinese";
+}
+
+.send-button {
+    font-size: 1.2vw;
+    font-family: "Press Start 2P for English";
+    padding: 8px 15px;
+    background-color: var(--color-background-2);
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    color: var(--color-background-2);
+    background-color: #fff;
+}
