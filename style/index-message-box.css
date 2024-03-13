@@ -206,6 +206,7 @@
 }
 
 .box-message-grag-pic .box-message-internal-pic .box-avatar {
+    position: relative;
     width: 100%;
     height: 70%;
 }
