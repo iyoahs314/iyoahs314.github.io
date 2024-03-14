@@ -16,11 +16,6 @@
             src: url("font/IPix-Chinese.ttf");
         }
 
-        @font-face {
-            font-family: "YeZiGongChangAoYeHei-2";
-            src: url("font/YeZiGongChangAoYeHei-2.ttf");
-        }
-
         :root {
             --color-background-1: rgb(188, 225, 237);
             --color-background-2: rgb(16, 88, 197);
@@ -43,7 +38,6 @@
             width: 100vw;
             transition: all 2s;
         }
-        
     </style>
 
     <link rel="stylesheet" href="style/index-left-slider.css">
@@ -54,55 +48,32 @@
 </head>
 <body">
     <div class="shell">
-        <div class="item active">
+        <div class="item active item1">
             <div class="box" >
                 <div class="mini-box">
                     <div class="title">
-                        <span class="title-content">title1:</span>
+                        <span class="title-content">图片集锦:</span>
                     </div>
                     <div class="content-body">
                         <div class="two-lins leave_message">
                             <div class="left">
-                              <!-- 添加点什么呢 -->
-
-                            </div>
-                            <div class="right">
-                                <div class="right-top"></div>
-                                <div class="right-bottom">
-                                    <p>MORE&gt;</p>
+                                <div class="en-text-box">
+                                    <div class="rotate-text">
+                                        IMAGE
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="choice">
-                        <div class="choice-box" onclick="gotoNext()">
-                            <p2>NEXT</p2>
-                        </div>
-            
-                        <div class="choice-box" onclick="gotoPrev()">
-                            <p2>PREV</p2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item next">
-            <div class="box" >
-                <div class="mini-box">
-                    <div class="title">
-                        <span class="title-content">title2:</span>
-                    </div>
-                    <div class="content-body">
-                        <div class="two-lins leave_message">
-                            <div class="left">
-
+                                <div class="left-right-box">
+                                    <div class="zh-text-box">
+                                        <h1>图片集锦</h1>
+                                        <h3>每一张都值得成为壁纸</h3>
+                                    </div>
+                                </div>
                             </div>
                             <div class="right">
                                 <div class="right-top">
-                                    
+                                    <img src="pic/image.png">
                                 </div>
-                                <div class="right-bottom">
+                                <div class="right-bottom" onclick="goToImageHtml()">
                                     <p>MORE&gt;</p>
                                 </div>
                             </div>
@@ -121,23 +92,32 @@
                 </div>
             </div>
         </div>
-        <div class="item">
+        <div class="item next item2">
             <div class="box" >
                 <div class="mini-box">
                     <div class="title">
-                        <span class="title-content">title3</span>
+                        <span class="title-content">动画推荐:</span>
                     </div>
                     <div class="content-body">
                         <div class="two-lins leave_message">
                             <div class="left">
-                                <!-- <p>全民制作人你们好，我是个人练习生蔡徐坤，喜欢唱、跳、rap、篮球。</p>
-                                <p>全民制作人你们好，我是个人练习生蔡徐坤，喜欢唱、跳、rap、篮球。</p>
-                                <p>全民制作人你们好，我是个人练习生蔡徐坤，喜欢唱、跳、rap、篮球。</p>
-                                <p>全民制作人你们好，我是个人练习生蔡徐坤，喜欢唱、跳、rap、篮球。</p> -->
+                                <div class="en-text-box">
+                                    <div class="rotate-text">
+                                        ANIME
+                                    </div>
+                                </div>
+                                <div class="left-right-box">
+                                    <div class="zh-text-box">
+                                        <h1>动画推荐</h1>
+                                        <h3>好的剧情、优秀的作画值得品味</h3>
+                                    </div>
+                                </div>
                             </div>
                             <div class="right">
-                                <div class="right-top"></div>
-                                <div class="right-bottom">
+                                <div class="right-top">
+                                    <img src="pic/anime.png">
+                                </div>
+                                <div class="right-bottom" onclick="goToAnimeHtml()">
                                     <p>MORE&gt;</p>
                                 </div>
                             </div>
@@ -156,21 +136,76 @@
                 </div>
             </div>
         </div>
-        <div class="item prev">
+        <div class="item item3">
             <div class="box" >
                 <div class="mini-box">
                     <div class="title">
-                        <span class="title-content">title4</span>
+                        <span class="title-content">音乐推荐:</span>
                     </div>
                     <div class="content-body">
                         <div class="two-lins leave_message">
                             <div class="left">
-                                <!-- <p>全民制作人你们好，我是个人练习生蔡徐坤，喜欢唱、跳、rap、篮球。</p>
-                                <p>全民制作人你们好，我是个人练习生蔡徐坤，喜欢唱、跳、rap、篮球。</p> -->
+                                <div class="en-text-box">
+                                    <div class="rotate-text">
+                                        MUSIC
+                                    </div>
+                                </div>
+                                <div class="left-right-box">
+                                    <div class="zh-text-box">
+                                        <h1>音乐推荐</h1>
+                                        <h3>听一首歌，放松一下心情</h3>
+                                    </div>
+                                </div>
                             </div>
                             <div class="right">
-                                <div class="right-top"></div>
-                                <div class="right-bottom">
+                                <div class="right-top">
+                                    <img src="pic/music.png">
+                                </div>
+                                <div class="right-bottom" onclick="goToMusicHtml()">
+                                    <p>MORE&gt;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="choice">
+                        <div class="choice-box" onclick="gotoNext()">
+                            <p2>NEXT</p2>
+                        </div>
+            
+                        <div class="choice-box" onclick="gotoPrev()">
+                            <p2>PREV</p2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item prev item4">
+            <div class="box" >
+                <div class="mini-box">
+                    <div class="title">
+                        <span class="title-content">关于本站:</span>
+                    </div>
+                    <div class="content-body">
+                        <div class="two-lins leave_message">
+                            <div class="left">
+                                <div class="en-text-box">
+                                    <div class="rotate-text">
+                                        ABOUT
+                                    </div>
+                                </div>
+                                <div class="left-right-box">
+                                    <div class="zh-text-box">
+                                        <h1>关于本站</h1>
+                                        <h3>开发、设计、灵感</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="right-top">
+                                    <img src="pic/about.png">
+                                </div>
+                                <div class="right-bottom" onclick="goToAboutHtml()">
                                     <p>MORE&gt;</p>
                                 </div>
                             </div>
@@ -210,7 +245,7 @@
 
         <div class="intro-iyoahs">
             <p>公告栏:</p>
-            <p>————————————————————————————</p>
+            <p>————————————————</p>
             <p>欢迎来到我的世界，在这里</p>
             <p>你可以点击下方的留言框给我留言</p>
             <p>也可以点开个人介绍框了解我</p>
@@ -219,7 +254,7 @@
             <p>切换不同的主题并解锁更多有趣的内容</p>
             <p>更多彩蛋期待你的探索！！！</p>
             <p>作者：邵艺(iyoahs)</p>
-            <p>————————————————————————————</p>
+            <p>————————————————</p>
         </div>
     </div>
 
@@ -261,8 +296,8 @@
                 </span>
             </div>
             
-            <div class="choice" onclick="openLeaveMessage()">
-                <div class="choice-box">
+            <div class="choice">
+                <div class="choice-box" onclick="openLeaveMessage()">
                     <p2>YES</p2>
                 </div>
     
@@ -284,8 +319,8 @@
                 <img src="pic/iyoahs.jpg" class="my-avatar">
             </div>
             
-            <div class="choice" onclick="openIntro()">
-                <div class="choice-box">
+            <div class="choice">
+                <div class="choice-box" onclick="openIntro()">
                     <p2>YES</p2>
                 </div>
     

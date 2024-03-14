@@ -30,7 +30,7 @@
     text-align: right;
     font-size: 40px;
     font-weight: 500;
-    background-color:  rgb(58, 60, 63);
+    background-color:  var(--color-background-2);
     color: white;
     border-top-left-radius: 0.5vw;
     border-top-right-radius: 0.5vw;
