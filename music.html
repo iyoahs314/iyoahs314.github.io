@@ -99,21 +99,21 @@
             background-color: #4caf50;
         }
 
-        button {
+        .play-button {
             padding: 10px 20px;
-            background-color: #4caf50;
-            color: #fff;
+            /* background-color: #4caf50; */
+            background-image: url("pic/play.png");
+            background-position: center;
+            background-size: cover;
+            width: 100px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
             margin-top: 20px;
             transition: background-color 0.3s ease;
         }
 
-        button:hover {
-            background-color: #45a049;
-        }
 
         @keyframes cd-rotate {
             from {
@@ -140,7 +140,11 @@
                 <div id="progress"></div>
             </div>
             <audio id="myAudio" src="music/background_music.mp3"></audio>
-            <button onclick="playPause()">播放/暂停</button>
+            <div class="buttons">
+                <button class="left"></button>
+                <button class="play-button" onclick="playPause()"></button>
+                <button class="right"></button> b``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            </div>
         </div>
    </div>
 
@@ -149,20 +153,23 @@
         var progressBar = document.getElementById("progress");
 
         function playPause() {
+            var play_button = document.querySelector(".play-button");
         if (audio.paused) {
             audio.play();
             updateProgressBar();
+            play_button.style.backgroundImage = "url('pic/stop.png')";
         } else {
             audio.pause();
+            play_button.style.backgroundImage = "url('pic/play.png')";
         }
         }
 
         function updateProgressBar() {
-        var percentage = (audio.currentTime / audio.duration) * 100;
-        progressBar.style.width = percentage + '%';
-        if (!audio.paused) {
-            requestAnimationFrame(updateProgressBar);
-        }
+            var percentage = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = percentage + '%';
+            if (!audio.paused) {
+                requestAnimationFrame(updateProgressBar);
+            }
         }
 
         audio.addEventListener('timeupdate', updateProgressBar);

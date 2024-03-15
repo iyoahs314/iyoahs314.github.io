@@ -54,7 +54,7 @@ body {
 .to-top {
     position: fixed;
     bottom: 5%;
-    right: 25%;
+    right: 18%;
     width: 100px;
     height: 60px;
     border-radius: 10px;
@@ -135,7 +135,7 @@ body {
     font-weight: bold;
     white-space: nowrap; 
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; 
     margin-bottom: 10px;
 }
 

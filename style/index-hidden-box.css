@@ -110,7 +110,12 @@
 .chat-container .chat-messages {
     padding: 20px;
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 30vh;
+}
+
+.chat-container .chat-messages::-webkit-scrollbar {
+    display: none;
 }
 
 .chat-container .message1 {
