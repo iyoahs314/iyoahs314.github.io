@@ -309,6 +309,7 @@
     background-image: url("../pic/view1.png");
     background-size: cover;
     display: flex;
+    overflow: hidden;
 }
 
 .item2 .left {
@@ -317,6 +318,7 @@
     background-image: url("../pic/view2.png");
     background-size: cover;
     display: flex;
+    overflow: hidden;
 }
 
 .item3 .left {
@@ -325,6 +327,7 @@
     background-image: url("../pic/view3.png");
     background-size: cover;
     display: flex;
+    overflow: hidden;
 }
 
 .item4 .left {
@@ -333,6 +336,7 @@
     background-image: url("../pic/view4.png");
     background-size: cover;
     display: flex;
+    overflow: hidden;
 }
 
 .left .en-text-box {
@@ -352,7 +356,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 50px;
+    font-size: 5vh;
 }
 
 .left-right-box {
@@ -367,8 +371,16 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.left-right-box .zh-text-box h1,h3 {
+.left-right-box .zh-text-box h1 {
     color: white;
     font-family: "IPix-Chinese";
     padding:5px;
+    font-size: 3vh;
+}
+
+.left-right-box .zh-text-box h3 {
+    color: white;
+    font-family: "IPix-Chinese";
+    padding:5px;
+    font-size: 2vh;
 }
