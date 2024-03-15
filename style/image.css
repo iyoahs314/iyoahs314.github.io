@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "press";
+  src: url("../font/PressStart2P-Regular.ttf");
+}
+
+@font-face {
+  font-family: "IPix";
+  src: url("../font/IPix-Chinese.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  background-color: #3B4049;
+  background-size: contain;
+  background-position: center;
+}
+
+.back-home {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 40px;
+  font-family: press;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+}
+
+.back-home:hover {
+  color: white;
+  background-color: black;
+  animation: text-move 1s infinite;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 5%;
+  right: 15%;
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: IPix;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+}
+
+.to-top:hover {
+  background-color: black;
+  color: white;
+}
+
+.image-wall {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  display: flex;
+}
+
+.image-wall .image-wall-left,
+.image-wall .image-wall-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.image-wall .image-wall-left img,
+.image-wall .image-wall-right img {
+  max-width: 95%; 
+  height: auto; 
+  padding: 10px;
+  cursor: pointer;
+}
+
+@keyframes text-move {
+  from {
+      text-align: end;
+  }
+  to {
+      text-align: start;
+  }
+}

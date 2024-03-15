@@ -1,0 +1,162 @@
+@font-face {
+    font-family: "press";
+    src: url("../font/PressStart2P-Regular.ttf");
+  }
+
+@font-face {
+    font-family: "IPix";
+    src: url("../font/IPix-Chinese.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../pic/anime-pic/0080_gundam_back.jpg");
+    background-size: contain;
+    background-position: center;
+}
+
+.main-body {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    
+}
+
+.back-home {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 40px;
+    font-family: press;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+}
+
+.back-home:hover {
+    color: white;
+    background-color: black;
+    animation: text-move 1s infinite;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 5%;
+    right: 25%;
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: IPix;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+}
+
+.to-top:hover {
+    background-color: black;
+    color: white;
+}
+
+.back-color {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+}
+
+.main-content {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.main-content .anime-content {
+    width: 100%;
+    height: 250px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content .anime-content .anime-image-box {
+    height: 95%;
+    aspect-ratio: 3 / 4;
+    border: 1px solid black;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+}
+
+.main-content .anime-content .anime-image-box img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.main-content .anime-content .anime-image-box img:hover {
+    opacity: 0.7;
+}
+
+.main-content .anime-content .anime-intro-box {
+    flex: 1;
+    margin: 10px;
+    width: 400px;
+    height: 240px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+} 
+
+.main-content .anime-content .anime-intro-box::-webkit-scrollbar {
+    display: none;
+}
+
+.main-content .anime-content .anime-intro-box .anime-title {
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+
+.main-content .anime-content .anime-intro-box .anime-tag {
+    font-size: 20px;
+    white-space: nowarp;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+}
+
+.main-content .anime-content .anime-intro-box .anime-summary {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+@keyframes text-move {
+    from {
+        text-align: end;
+    }
+    to {
+        text-align: start;
+    }
+}
