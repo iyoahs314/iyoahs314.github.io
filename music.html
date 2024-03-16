@@ -4,175 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>音乐推荐</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            width: 100vw;
-            height: 100vh;
-            background-color: #3B4049;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .main-content {
-            width: 30%;
-            height: 90%;
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid #000;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .box-player {
-            width: 90%;
-            height: 90%;
-            border: 1px solid #000;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .cd-outline {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url("pic/iyoahs.jpg");
-            background-position: center;
-            background-size: cover;
-            width: 60%;
-            aspect-ratio: 1 / 1;
-            border-radius: 50%;
-            box-sizing: border-box;
-            border: 1px solid rgba(0, 0, 0, 0.8);
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-            z-index: 10;
-            animation: cd-rotate 10s linear infinite;
-        }
-
-        .cd-inline {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(255, 255, 255, 0.9);
-            width: 25%;
-            aspect-ratio: 1 / 1;
-            border: 1px solid #000;
-            border-radius: 50%;
-        }
-
-        .cd-hole {
-            background-color: #3B4049;
-            width: 60%;
-            aspect-ratio: 1 / 1;
-            border: 1px solid #000;
-            border-radius: 50%;
-        }
-
-        .music-name {
-            font-size: 30px;
-            font-weight: bold;
-            color: #333;
-            margin-top: 10px;
-        }
-
-        #progressBar {
-            width: 80%;
-            height: 10px;
-            background-color: #ccc;
-            margin-top: 20px;
-        }
-
-        #progress {
-            width: 0%;
-            height: 100%;
-            background-color: #4caf50;
-        }
-
-        .play-button {
-            padding: 10px 20px;
-            /* background-color: #4caf50; */
-            background-image: url("pic/play.png");
-            background-position: center;
-            background-size: cover;
-            width: 100px;
-            aspect-ratio: 1 / 1;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-
-        @keyframes cd-rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="style/music.css">
 </head>
 <body> 
    <div class="main-content">
+        <div class="box-back">
+            <img src="pic/back.png" onclick="backHome()">
+        </div>
         <div class="box-player">
-            <div class="cd-outline">
-                <div class="cd-inline">
-                    <div class="cd-hole"></div>
-                </div>
+            <div class="cd-image pause"></div>
+            <div class="music-info">
+                <div class="music-name">藍二乘</div>
+                <div class="music-artist">ヨルシカ</div>
             </div>
-            <div class="music-name">及你太美</div>
-
-            <div id="progressBar">
+            <div id="progressBar" onclick="changeProgress(event)">
                 <div id="progress"></div>
             </div>
-            <audio id="myAudio" src="music/background_music.mp3"></audio>
+            <div class="time-sound">
+                <input type="range" min="0" max="1" step="0.01" value="1" oninput="setVolume(this.value)">
+                <div class="time">00:00/00:00</div>
+            </div>
+            <audio id="myAudio" src="music/yorushika_藍二乘.mp3"></audio>
             <div class="buttons">
-                <button class="left"></button>
-                <button class="play-button" onclick="playPause()"></button>
-                <button class="right"></button> b``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                <div class="button left" onclick="toPrevMusic()"></div>
+                <div class="button play-button" onclick="playPause()"></div>
+                <div class="button right" onclick="toNextMusic()"></div>
             </div>
         </div>
    </div>
 
-   <script>
-        var audio = document.getElementById("myAudio");
-        var progressBar = document.getElementById("progress");
-
-        function playPause() {
-            var play_button = document.querySelector(".play-button");
-        if (audio.paused) {
-            audio.play();
-            updateProgressBar();
-            play_button.style.backgroundImage = "url('pic/stop.png')";
-        } else {
-            audio.pause();
-            play_button.style.backgroundImage = "url('pic/play.png')";
-        }
-        }
-
-        function updateProgressBar() {
-            var percentage = (audio.currentTime / audio.duration) * 100;
-            progressBar.style.width = percentage + '%';
-            if (!audio.paused) {
-                requestAnimationFrame(updateProgressBar);
-            }
-        }
-
-        audio.addEventListener('timeupdate', updateProgressBar);
-   </script>
+   <script src="script/music.js"></script>
 </body>
 </html>

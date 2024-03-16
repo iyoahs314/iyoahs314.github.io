@@ -19,6 +19,7 @@ body {
     background-image: url("../pic/anime-pic/0080_gundam_back.jpg");
     background-size: contain;
     background-position: center;
+    overflow-x: hidden;
 }
 
 .main-body {
@@ -26,7 +27,7 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     overflow-x: hidden;
-    
+    scroll-behavior: smooth;
 }
 
 .back-home {
@@ -52,9 +53,12 @@ body {
 }
 
 .to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     bottom: 5%;
-    right: 18%;
+    right: 5%;
     width: 100px;
     height: 60px;
     border-radius: 10px;
@@ -65,6 +69,7 @@ body {
     cursor: pointer;
     text-align: center;
     padding: 5px;
+    text-decoration: none;
 }
 
 .to-top:hover {

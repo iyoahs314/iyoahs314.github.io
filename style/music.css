@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../pic/music_background.jpg");
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    width: 400px;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.box-back {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.box-back img {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    top: 2%;
+    left: 2%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.box-back img:hover {
+    transform: scale(1.1);
+}
+
+.box-player {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cd-image {
+    background-image: url("../pic/yorushika_logo.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.music-info {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.music-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(50, 50, 50);
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.music-artist {
+    font-size: 20px;
+    color: rgb(70, 70, 70);
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#progressBar {
+    width: 80%;
+    height: 10px;
+    background-color: rgba(100, 100, 100, 0.5);
+    margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.time-sound {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.buttons .button {
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.buttons .button:hover {
+    transform: scale(1.1);
+}
+
+.buttons .play-button {
+    background-image: url("../pic/play.png");
+}
+
+.buttons .pause-button {
+    background-image: url("../pic/pause.png");
+}
+
+.buttons .left {
+    background-image: url("../pic/left.png");
+}
+
+.buttons .right {
+    background-image: url("../pic/right.png");
+}
