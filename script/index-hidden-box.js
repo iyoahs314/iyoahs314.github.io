@@ -38,11 +38,8 @@ function sendMessage() {
     var message = messageInput.value;
     if (isValidMessage(message)) {
         message = insertNewlines(message, charactersPerLine);
-        displayUserMessage('pic/user.png', message, false);
-
-        setTimeout(function() {
-            displayUserMessage('pic/iyoahs.jpg', "留言已收到。", true);
-        }, 2000);
+        displayUserMessage('pic/user.png', message, false); 
+        displayUserMessage('pic/iyoahs.jpg', "留言已收到。", true);
     }
 }
 

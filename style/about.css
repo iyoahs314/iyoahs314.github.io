@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "IPix";
+    src: url("../font/IPix-Chinese.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IPix";
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3B4049;
+}
+
+.box-back {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.box-back img {
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    top: 2%;
+    left: 2%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.box-back img:hover {
+    transform: scale(1.1);
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    padding: 20px;
+}
+
+.content-top {
+    position: relative;
+}
+
+.content-top img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.dialogue-box {
+    display: none;
+    position: absolute;
+    bottom: 50%;
+    left: calc(50% + 100px);
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dialogue-box-2 {
+    display: none;
+    position: absolute;
+    bottom: 35%;
+    right: calc(50% + 100px);
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin-bottom: 5px;
+}
+
+.section ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section ul li a:hover {
+    color: #0056b3;
+}
