@@ -1,7 +1,13 @@
+@font-face {
+    font-family: "IPix";
+    src: url("../font/IPix-Chinese.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: IPix;
 }
 
 body {
