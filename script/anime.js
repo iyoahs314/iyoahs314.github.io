@@ -4,7 +4,7 @@ function changeBackground(event) {
     var img_path = img.getAttribute('src');
     console.log(img_path);
     var img_path_split = img_path.split('.');
-    body.style.backgroundImage = "url('../" + img_path_split[0] + "_back.jpg')";
+    body.style.backgroundImage = "url('" + img_path_split[0] + "_back.jpg')";
 }
 
 function backHome() {

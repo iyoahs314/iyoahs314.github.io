@@ -30,6 +30,7 @@ body {
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    transition: all 0.1s;
 }
 
 .box-back img:hover {
@@ -71,7 +72,7 @@ body {
     padding: 10px;
     width: 200px;
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
     color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -87,7 +88,7 @@ body {
     padding: 10px;
     width: 200px;
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
     color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

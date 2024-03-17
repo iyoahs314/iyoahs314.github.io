@@ -4,8 +4,8 @@ var play_button = document.querySelector(".play-button");
 var cd_image = document.querySelector('.cd-image');
 var music_name = document.querySelector('.music-name');
 var music_artist = document.querySelector('.music-artist');
-var music_list = ['yorushika_藍二乘', 'yorushika_左右盲', 'yorushika_爆弹魔', 'zutomayo_Ham'];
-var music_artist_dist = {'yorushika':"ヨルシカ","zutomayo":"ずっと真夜中でいいのに。"};
+var music_list = ['yorushika_藍二乘', 'yorushika_左右盲', 'yorushika_爆弹魔', 'zutomayo_Ham', 'zutomayo_あいつら全員同窓会', 'yama_春を告げる'];
+var music_artist_dist = {'yorushika':"ヨルシカ","zutomayo":"ずっと真夜中でいいのに。", "yama":"yama"};
 var time = document.querySelector(".time-sound .time");
 var currentMusicIndex = 0;
 
@@ -31,7 +31,7 @@ function updateProgressBar() {
     }
     if (audio.currentTime === audio.duration) {
         audio.currentTime = 0;
-        audio,play;
+        audio.play();
     }
     if (audio.currentTime === 0) {
         time.innerHTML = "00:00/00:00";
@@ -51,7 +51,7 @@ function toNextMusic() {
     audio.src = "../music/" + music_list[currentMusicIndex] + ".mp3";
     music_artist.innerHTML = music_artist_dist[music_list[currentMusicIndex].split('_')[0]];
     music_name.innerHTML = music_list[currentMusicIndex].split('_')[1];
-    cd_image.style.backgroundImage = "url('../pic/" + music_list[currentMusicIndex].split('_')[0] + "_logo.jpg')";
+    cd_image.style.backgroundImage = "url('pic/" + music_list[currentMusicIndex].split('_')[0] + "_logo.jpg')";
     if (!wasPaused) { // 如果前一个曲子是播放状态，切换的下一个是播放
         audio.play();
     }
@@ -60,10 +60,10 @@ function toNextMusic() {
 function toPrevMusic() {
     var wasPaused = audio.paused;
     currentMusicIndex = (currentMusicIndex - 1 + music_list.length) % music_list.length;
-    audio.src = "../music/" + music_list[currentMusicIndex] + ".mp3";
+    audio.src = "music/" + music_list[currentMusicIndex] + ".mp3";
     music_artist.innerHTML = music_artist_dist[music_list[currentMusicIndex].split('_')[0]];
     music_name.innerHTML = music_list[currentMusicIndex].split('_')[1];
-    cd_image.style.backgroundImage = "url('../pic/" + music_list[currentMusicIndex].split('_')[0] + "_logo.jpg')";
+    cd_image.style.backgroundImage = "url('pic/" + music_list[currentMusicIndex].split('_')[0] + "_logo.jpg')";
     if (!wasPaused) {
         audio.play();
     }

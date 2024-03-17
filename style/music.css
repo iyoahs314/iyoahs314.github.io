@@ -49,6 +49,7 @@ body {
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    transition: all 0.1s;
 }
 
 .box-back img:hover {
@@ -110,10 +111,14 @@ body {
 #progress {
     width: 0%;
     height: 100%;
-    background-color: green;
+    background-color: rgb(0, 128, 0);
     position: absolute;
     top: 0;
     left: 0;
+}
+
+#progress:hover {
+    background-color: rgba(0, 128, 0, 0.7);
 }
 
 .time-sound {

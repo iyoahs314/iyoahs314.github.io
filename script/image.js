@@ -9,7 +9,7 @@ function changeBackground(event) {
     var background = document.body;
     var img = event.target;
     var img_path = img.getAttribute('src');
-    background.style.backgroundImage = "url('../" + img_path + "')";
+    background.style.backgroundImage = "url('" + img_path + "')";
 }
 
 function backHome() {
