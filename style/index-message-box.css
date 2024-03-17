@@ -2,7 +2,7 @@
     width: 15vw;
     aspect-ratio: 8 / 5;
     background-color:  var(--color-background-1);
-    border: 0.14vw solid  rgb(158, 158, 158);
+    border: 0.14vw solid  var(--color-background-2);
     box-sizing: border-box; 
     display: flex;
     flex-direction: column;
@@ -56,9 +56,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(44, 45, 47);
+    background-color: var(--color-background-2);
     border-top: 0.2vw solid rgb(219, 222, 223);
-    border-left: 0.2vw solid rgb(143, 147, 151);
+    border-left: 0.2vw solid var(--color-background-1);
     border-bottom: 0.2vw solid rgb(13, 14, 16);
     border-right: 0.2vw solid rgb(19, 20, 22);
     cursor: pointer;
@@ -136,7 +136,7 @@
     width: 12vw;
     aspect-ratio: 2 / 3;
     background-color:  var(--color-background-1);
-    border: 0.14vw solid  rgb(158, 158, 158);
+    border: 0.14vw solid  var(--color-background-2);
     box-sizing: border-box; 
     display: flex;
     flex-direction: column;
@@ -190,9 +190,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(44, 45, 47);
+    background-color: var(--color-background-2);
     border-top: 0.2vw solid rgb(219, 222, 223);
-    border-left: 0.2vw solid rgb(143, 147, 151);
+    border-left: 0.2vw solid var(--color-background-1);
     border-bottom: 0.2vw solid rgb(13, 14, 16);
     border-right: 0.2vw solid rgb(19, 20, 22);
     cursor: pointer;
