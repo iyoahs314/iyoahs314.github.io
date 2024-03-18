@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 Page</title>
+<style>
+    @font-face {
+        font-family: 'Press Start 2P';
+        src: url("font/PressStart2P-Regular.ttf");
+    }
+
+
+    body {
+        margin: 0;
+        height: 855px;
+        text-transform: uppercase;
+        background-color: rgb(50, 47, 47);
+        background-image: url("pic/intro_background.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    h1, h2, h3 {
+        font-family: 'Press Start 2P', cursive;
+        margin: 0 auto 0 auto;
+        text-align: left;
+        position: relative;
+        text-shadow: 3px 3px 0px #2038ec;
+        color: #fff;
+        font-weight: 400;
+    }
+
+    h1 {
+        font-size: 3vw;
+        width: 15vw;
+        top: 148px;
+        line-height: 60px;
+        padding-left: 292px;
+    }
+
+    h2 {
+        top: 26px;
+        width: 15vw;
+        font-size: 2vw;
+        z-index: 1;
+    }
+
+    h2 a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 375px;
+        width: 20vw;
+    }
+
+    h2 a:hover {
+        text-shadow: 3px 3px 0px #d82800;
+    }
+
+    h3 {
+        width: 30vw;
+        padding-right: 300px;
+        font-size: 2vw;
+        margin-top: 0;
+    }
+</style>
+</head>
+<body>
+<div class="background"></div>
+<h2>
+    <a href="#">IYOAHS</a>
+</h2>
+<h3>Page not found</h3>
+<h1></h1>
+
+<script>
+    var showText = function (target, message, index, interval) {
+        var element = document.querySelector(target);
+        if (index < message.length) { 
+            element.textContent += message[index++];
+            setTimeout(function () { showText(target, message, index, interval); }, interval);
+        } 
+    }
+    window.onload = function () {
+        showText("h1", "404 Not found, This is an error!", 0, 80);
+    };
+</script>
+
+</body>
+</html>

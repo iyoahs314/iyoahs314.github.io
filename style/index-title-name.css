@@ -41,8 +41,14 @@
     display: block;
     font-size: 6vw;
     color: white;
+    text-shadow: 5px 5px var(--color-background-2);
     letter-spacing: 4px;
     animation: typing 10s steps(6) infinite;
+    cursor: pointer;
+}
+
+.iyoahs .title-iyoahs .type-writing:hover {
+    text-shadow: 6px 6px 0 var(--color-background-1);
 }
 
 .iyoahs .title-iyoahs::after {
