@@ -17,7 +17,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-image: url("../pic/anime-pic/0080_gundam_back.jpg");
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     overflow-x: hidden;
     transition: all 1s ease-in-out;
