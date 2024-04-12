@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../pic/intro_background.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.star-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.stars {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.stars:hover {
+    transform: scale(1.1);
+}
+
+textarea, input[type="email"] {
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.fadeback-button {
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.fadeback-button:hover {
+    background-color: #45a049;
+}

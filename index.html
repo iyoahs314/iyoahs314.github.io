@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iyoahs-site</title>
     
+    <link rel="stylesheet" href="style/body_opacity_up.css" type="text/css">
     <style>
         @font-face {
             font-family: "Press Start 2P for English";
@@ -40,11 +41,13 @@
         }
     </style>
 
-    <link rel="stylesheet" href="style/index-left-slider.css">
-    <link rel="stylesheet" href="style/index-music-contact.css">
-    <link rel="stylesheet" href="style/index-hidden-box.css">
-    <link rel="stylesheet" href="style/index-title-name.css">
-    <link rel="stylesheet" href="style/index-message-box.css">
+    <link rel="stylesheet" href="style/index-time.css" type="text/css">
+    <link rel="stylesheet" href="style/index-left-slider.css" type="text/css">
+    <link rel="stylesheet" href="style/index-music-contact.css" type="text/css">
+    <link rel="stylesheet" href="style/index-hidden-box.css" type="text/css">
+    <link rel="stylesheet" href="style/index-title-name.css" type="text/css">
+    <link rel="stylesheet" href="style/index-message-box.css" type="text/css">
+    <link rel="stylesheet" href="style/index-apps.css" type="text/css">
 </head>
 <body">
     <div class="shell">
@@ -239,7 +242,7 @@
     </div>
 
     <div class="iyoahs">
-        <div class="title-iyoahs">
+        <div class="title-iyoahs" onclick="changeIntroIyoahs()">
             <h2 class="type-writing">iyoahs</h2>
         </div>
 
@@ -255,7 +258,7 @@
             <p>更多彩蛋期待你的探索！！！</p>
             <p>作者：邵艺(iyoahs)</p>
             <p>————————————————</p>
-        </div>
+        </div>     
     </div>
 
     <div class="hidden-window">
@@ -331,10 +334,37 @@
         </div>
     </div>
 
+    <div class="time-box">
+        <div class="hour">00</div>
+        <div class="colon">:</div>
+        <div class="minute">00</div>
+        <div class="colon">:</div>
+        <div class="second">00</div>
+    </div>
+
+    <div class="right-drawer">
+        <div class="apps">
+            <img src="pic/calendar.png" class="apps-img">
+        </div>
+        <div class="apps">
+            <img src="pic/problem.png" class="apps-img">
+        </div>
+        <div class="apps">
+            <img src="pic/star.png" class="apps-img">
+        </div>
+        <div class="apps">
+            <img src="pic/underconstruct.png" class="apps-img">
+        </div>
+    </div>
+    
+
     <div style="background-color: rgba(0, 0, 0, 0.4); position: absolute;height: 100%;width: 100%; z-index: -100;"></div>
 
-    <script src="script/index-left-slider.js"></script>
-    <script src="script/index-hidden-box.js"></script>
-    <script src="script/index-message-box.js"></script>
+    <script src="script/index-left-slider.js" type="text/javascript"></script>
+    <script src="script/index-hidden-box.js" type="text/javascript"></script>
+    <script src="script/index-message-box.js" type="text/javascript"></script>
+    <script src="script/index-time.js" type="text/javascript"></script>
+    <script src="script/index-title-name.js" type="text/javascript"></script>
+    <script src="script/index-apps.js" type="text/javascript"></script>
 </body>
 </html>

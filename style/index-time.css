@@ -1,0 +1,15 @@
+.time-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+}
+
+.time-box div {
+    color: white;
+    font-size: 1vw;
+    font-family: "Press Start 2P for English";
+}

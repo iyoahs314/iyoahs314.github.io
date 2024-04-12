@@ -1,0 +1,13 @@
+body {
+    opacity: 1;
+    animation: opacity_up 1s;
+}
+
+@keyframes opacity_up {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

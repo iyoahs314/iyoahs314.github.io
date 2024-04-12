@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style/body_opacity_up.css" type="text/css">
+    <link rel="stylesheet" href="style/star.css" type="text/css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="heading">
+            对网站评分，并给予建议！ ^_^
+        </div>
+        <div class="star-container">
+            <div class="stars" style="background-image: url('pic/star_level_dark1.png');"></div>
+            <div class="stars" style="background-image: url('pic/star_level_dark2.png');"></div>
+            <div class="stars" style="background-image: url('pic/star_level_dark3.png');"></div>
+            <div class="stars" style="background-image: url('pic/star_level_dark4.png');"></div>
+            <div class="stars" style="background-image: url('pic/star_level_dark5.png');"></div>
+        </div>
+        <textarea name="feedback" id="feedback" placeholder="有什么想说的吗......" rows="5"></textarea>
+        <input type="email" name="name" id="name" placeholder="你的邮箱">
+        <button class="fadeback-button" onclick="submit()">提交/返回</button>
+    </div>
+</body>
+<script src="script/star.js" type="text/javascript"></script>
+</html>

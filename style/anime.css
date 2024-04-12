@@ -114,7 +114,7 @@ body {
 .main-content .anime-content .anime-image-box img {
     height: 100%;
     width: 100%;
-    background-size: cover;
+    object-fit: cover;
     transition: all 0.4s;
     cursor: pointer;
 }

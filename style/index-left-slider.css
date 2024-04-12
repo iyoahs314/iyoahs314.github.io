@@ -113,9 +113,6 @@
     transition: all 1s ease-in-out
 }
 
-/* .shell .box .mini-box .content-body .leave_message .left::-webkit-scrollbar {
-    display: none;
-} */
 
 .shell .box .mini-box .content-body .leave_message .left p {
     font-family: "YeZiGongChangAoYeHei-2";
@@ -152,16 +149,11 @@
     align-items: center;
 }
 
-/* .shell .box .mini-box .content-body .leave_message .right .right-top::after {
-    content: ">";
-    width: 100%;
-    height: 100%;
- */
 
 .shell .box .mini-box .content-body .leave_message .right .right-top img{
     width: 100%;
     height: 100%;
-    background-size: cover;
+    object-fit: cover;
     border-radius: 50%;
 }
 

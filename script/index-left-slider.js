@@ -9,7 +9,7 @@ let prev = 3;
 let next = 1; 
 
 body.style.backgroundImage = 'url("pic/background'+(current+1)+'.gif")';
-change_slider(3, "rgb(244, 230, 154)", "rgb(123, 104, 0)");
+change_slider(3, "rgb(255, 230, 154)", "rgb(200, 104, 0)");
 change_slider(2, "rgb(208, 175, 225)", "rgb(105, 3, 160)");
 change_slider(1, "rgb(152, 209, 188)", "rgb(0, 83, 3)");
 change_slider(0, "rgb(188, 225, 237)", "rgb(16, 88, 197)");  // 必须放在最后一个
@@ -51,7 +51,7 @@ const gotoNum = number => {
     }else if (current === 2) {
         change_slider(current, "rgb(208, 175, 225)", "rgb(105, 3, 160)");
     }else if (current === 3) {
-        change_slider(current, "rgb(244, 230, 154)", "rgb(123, 104, 0)");
+        change_slider(current, "rgb(255, 230, 154)", "rgb(200, 104, 0)");
     }
 }
 

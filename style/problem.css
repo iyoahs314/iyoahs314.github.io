@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "IPix";
+    src: url("../font/IPix-Chinese.ttf");
+}
+
+@font-face {
+    font-family: "press";
+    src: url("../font/PressStart2P-Regular.ttf");
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../pic/intro_background.png");
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-container {
+    width: 30vw;
+    margin: 20px auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.faq-container .title {
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: "press";
+}
+
+.faq-container .faq-item {
+    border-bottom: 1px solid rgb(217, 217, 217);
+    padding: 10px 0;
+}
+
+.faq-container .faq-question {
+    font-weight: bold;
+    font-family: "IPix";
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.faq-container .faq-question:hover {
+    opacity: 0.5;
+}
+
+.faq-container .faq-answer {
+    display: none;
+    font-family: "IPix";
+    padding-left: 20px;
+}
+
+button {
+    width: 20%;
+    aspect-ratio: 3 / 1;
+    font-size: 1vw;
+    font-family: "IPix";
+    font-weight: bold;
+    border-radius: 10px;
+    position: relative;
+    color: black;
+    background-color: rgb(100, 200, 255);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(100, 200, 255, 0.6);
+    border-color: rgba(0, 0, 0, 0.6);
+}

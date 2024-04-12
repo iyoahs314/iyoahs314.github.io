@@ -3,7 +3,7 @@ const letter = document.querySelector('.letter');
 const lidOne = document.querySelector('.wrapper .one');
 const lidTwo = document.querySelector('.wrapper .two');
 const envelope = document.querySelector('.wrapper .envelope');
-const back_index = document.querySelector(".back-index-box .back-index")
+const back_index = document.querySelector(".back-index-box .back-index"); 
 
 wrapper.addEventListener('click', function() {
     document.documentElement.style.setProperty('--letter-up', '0px');
